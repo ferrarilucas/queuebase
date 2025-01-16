@@ -45,6 +45,8 @@ Jobs in Queuebase are associated with a route. Below is a simple example of crea
 import { type JobRouter as QueuebaseJobRouter } from "queuebase/lib/types";
 import { createQueuebase } from "queuebase/next";
 
+const j = createQueuebase();
+
 export const jobRouter = {
   sayHello: j().handler(() => {
     console.log("Hello there!");
